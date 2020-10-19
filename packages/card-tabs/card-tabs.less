@@ -1,0 +1,82 @@
+
+@iconWidth: 60px;
+
+.card-tabs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    position: relative;
+
+    .left-icon, .right-icon {
+        width: @iconWidth;
+        font-size: 26px;
+        cursor: pointer;
+        position: relative;
+        z-index: 10000;
+    }
+    .left-icon {
+        text-align: left;
+    }
+    .right-icon {
+        text-align: right;
+    }
+    .modules {
+        width: calc((100% / 3) + (100% / 3 / 3) - 60px);
+        height: 100%;
+        display: block;
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        -webkit-transform-origin: center bottom 0;
+        transform-origin: center bottom 0;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        z-index: 1000;
+        font-size: 20px;
+
+        .module {
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            // background-color: rosybrown;
+            -webkit-transform: translateZ(400px);
+            -ms-transform: translateZ(400px);
+            -o-transform: translateZ(400px);
+            transform: translateZ(400px);
+            background: rgba(0,0,0,.15);
+            position: absolute;
+            padding: 15px;
+            cursor: pointer;
+
+            .phone-content {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .phone {
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+    } 
+    .list-enter-active, .list-leave-active {
+        transition: all 1s;
+    }
+    .list-enter, .list-leave-to {
+        opacity: 0;
+    }  
+}
