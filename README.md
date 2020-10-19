@@ -9,7 +9,7 @@
 
 1. 作为图片预览
 
-![](https://cdn.jsdelivr.net/gh/yeheihei/picture/2020-10-19/1603110538087-image.png)
+![](https://cdn.jsdelivr.net/gh/yeheihei/picture/2020-10-19/1603117831422-image.png)
 
 2. 自定义业务
 
