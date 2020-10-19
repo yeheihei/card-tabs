@@ -1,6 +1,9 @@
 # card-tabs
 
     一个基于vue的可视化tabs切换组件，可用于图片/照片展示，可视化业务处理，系统门户等。效果完全基于CSS3动画，扩展性高
+    
+    
+  github地址：[https://github.com/yeheihei/card-tabs](https://github.com/yeheihei/card-tabs)
 
 ## 示例
 
@@ -14,18 +17,18 @@
 ## 安装
 
 ```
-npm install cardTabs
+npm install cardtabs
 ```
 
 ## 注册
 
 ```
 // 全局注册
-import cardTabs from 'cardTabs'
-Vue.use(cardtabs)
+import cardTabs from 'cardtabs'
+Vue.use(cardTabs)
 
 // 局部注册
-import {cardTabs} from 'cardTabs'
+import {cardTabs} from 'cardtabs'
 components: {
   cardTabs
 }
@@ -47,7 +50,7 @@ components: {
 </template>
 
 <script>
-import { cardTabs } from 'cardTabs';
+import { cardTabs } from 'cardtabs';
 
 export default {
     name: 'App',
@@ -113,10 +116,13 @@ cards：
 ```
 // 安装依赖
 npm install
+
 // 启动
 npm run serve
-// 实例文档打包
+
+// 文档打包
 npm run build
+
 // cardtabs 打包
 npm run lib
 ```
