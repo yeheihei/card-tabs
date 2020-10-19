@@ -37,7 +37,7 @@ components: {
 
 ## 使用
 
-    示例代码
+示例代码
 
 ```
 <template>
