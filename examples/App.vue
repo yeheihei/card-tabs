@@ -1,56 +1,46 @@
 <!--
  * @Author: your name
  * @Date: 2020-09-29 10:45:04
- * @LastEditTime: 2020-10-05 16:52:07
+ * @LastEditTime: 2020-10-19 20:32:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \card-tabs\examples\App.vue
 -->
 <template>
-  <div id="app">
-    <cardTabs :cards="cards">
-      <div slot="card2" class="card1">
-        <div>
-          11111111111
-        </div>
-      </div>
-    </cardTabs>
-  </div>
+    <div id="app">
+        <cardTabs ref="cardTabs" :cards="cards"></cardTabs>
+    </div>
 </template>
 
 <script>
-import {cardTabs} from '../packages/index.js'
+import { cardTabs } from '../packages/index.js';
 
 export default {
-  name: 'App',
-  data() {
-    return {
-      cards: [
-        {
-          // slotName: 'card1',
-          url: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=202925631,2725838857&fm=26&gp=0.jpg'
-        },{
-          slotName: 'card2'
-        }, {
-          url: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3262742216,1287274998&fm=15&gp=0.jpg'
-        }, {
-          url: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3262742216,1287274998&fm=15&gp=0.jpg'
-        }, {
-          url: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3262742216,1287274998&fm=15&gp=0.jpg'
-        }, {
-          url: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3262742216,1287274998&fm=15&gp=0.jpg'
-        }, {
-          url: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3262742216,1287274998&fm=15&gp=0.jpg'
-        }
-      ]
-    }
-  },
-  components: {
-    cardTabs
-  }
-}
+    name: 'App',
+    data() {
+        return {
+            cards: [
+                {
+                    url:
+                        'https://cdn.jsdelivr.net/gh/yeheihei/picture/2020-10-19/1603107123273-wallhaven-xlq1rv.jpg',
+                },
+                {
+                    url:
+                        'https://cdn.jsdelivr.net/gh/yeheihei/picture/2020-10-19/1603107123295-backiee-98927.jpg',
+                },
+                {
+                    url:
+                        'https://cdn.jsdelivr.net/gh/yeheihei/picture/2020-10-19/1603107123209-backiee-102533.jpg',
+                },
+            ],
+        };
+    },
+    components: {
+        cardTabs,
+    },
+    methods: {},
+    mounted() {
+        this.$refs.cardTabs.setIndex(1);
+    },
+};
 </script>
-
-<style>
-
-</style>

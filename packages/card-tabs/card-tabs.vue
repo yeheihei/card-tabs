@@ -1,7 +1,7 @@
 <!--
  * @Author: lmx
  * @Date: 2020-06-01 09:47:29
- * @LastEditTime: 2020-10-05 18:25:23
+ * @LastEditTime: 2020-10-19 20:04:25
  * @LastEditors: Please set LastEditors
  * @Description: 卡片切换效果
  * @FilePath: \aiku\examples\components\doc\doc-src\card-tabs\card-tabs.vue
@@ -11,7 +11,7 @@
 </style>
 
 <template>
-    <div class="card-tabs" :style="{perspective: perspectiveWidth * 4 + 'px', height: height + 'px', transform: `translateY(${height/4}px)`}"> 
+    <div class="card-tabs" :style="{perspective: perspectiveWidth * 4 + 'px', height: height + 'px', justifyContent: showIcon ? 'space-between' : 'center', transform: `translateY(${height/4}px)`}"> 
         <div @click="leftTog" class="left-icon" v-if="showIcon">
             <slot v-if="showCustomLeftIcon" name="leftIcon"></slot>
             <img v-else src="./right.svg" alt="">
@@ -25,7 +25,7 @@
                     v-for="(item,index) in cards" 
                     :key="index"
                     class="module"
-                    @click="cardClick(index)">
+                    @click="setIndex(index)">
                     <slot v-if="item.slotName" :name="item.slotName"></slot>
                     <div class="phone-content" v-else>
                         <img class="phone" :src="item.url" alt="">
@@ -112,9 +112,9 @@ export default {
                 this.viewIndex += 1;
             }
         },
-        // 卡片点击
-        cardClick(index) {
-            this.viewIndex = index;
+        // 设置当前索引
+        setIndex(index) {
+            this.viewIndex = index
         }
     },
     created() {
