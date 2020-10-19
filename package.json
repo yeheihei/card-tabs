@@ -1,6 +1,6 @@
 {
   "name": "cardtabs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "卡片切换 - 展示类组件",
   "main": "lib/cardtabs.umd.min.js",
   "keywords": [
